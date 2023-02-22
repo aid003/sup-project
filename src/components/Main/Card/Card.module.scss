@@ -1,0 +1,31 @@
+@import 'src/assets/styles/variables';
+
+.container {
+    width: 100%;
+    display: flex;
+    background-color: #232431;
+    border-radius: 20px;
+    padding: 17px 24px 17px 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+label {
+    margin-left: 5px;
+}

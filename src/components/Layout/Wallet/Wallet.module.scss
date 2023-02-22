@@ -1,0 +1,17 @@
+@import 'src/assets/styles/variables';
+
+.amount {
+    display: flex;
+    width: 140px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color:#232431;
+    color: white;
+    border-radius: 64px;
+
+    > p {
+        text-transform: uppercase;
+        font-size: x-large;
+    }
+}

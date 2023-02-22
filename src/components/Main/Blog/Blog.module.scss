@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+
+.container {
+    display: flex;
+    background-color: #232431;
+    width: 100%;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 16px;
+    margin-top: 50px;
+}
