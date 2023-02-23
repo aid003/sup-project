@@ -46,7 +46,7 @@
 			}
 
 			a {
-				color: #000;
+				color: $content;
 				text-decoration: none;
 				transition: color 0.2s ease;
 
@@ -55,6 +55,14 @@
 					color: $accent;
 					margin: 4px 0;
 				}
+			}
+
+			> li {
+				
+				> button {
+					color: $content;
+				}
+
 			}
 		}
 	}

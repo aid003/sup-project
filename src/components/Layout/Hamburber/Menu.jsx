@@ -21,11 +21,11 @@ const Menu = ({ isShow, setIsShow }) => {
             <ul>
                 {menu.map((item, index) => (
                     <li key={`_menu_${index}`}>
-                        <div to={item.link}>{item.title}</div>
+                        <Link to={item.link}>{item.title}</Link>
                     </li>
                 ))}
                 <li>
-                    <button onClick={logoutHandler}>Logout</button>
+                    <button onClick={logoutHandler}>Out</button>
                 </li>
             </ul>
         </nav>

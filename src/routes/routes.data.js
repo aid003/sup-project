@@ -3,13 +3,13 @@ import Home from '../components/screens/home/Home'
 
 export const routes = [
 	{
-		path: '/auth',
-		component: Auth,
+		path: '/',
+		component: Home,
 		isAuth: false
 	},
 	{
-		path: '/',
-		component: Home,
-		isAuth: true
+		path: '/auth',
+		component: Auth,
+		isAuth: false
 	}
 ]

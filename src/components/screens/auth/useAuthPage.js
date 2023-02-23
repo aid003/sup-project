@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { useAuth } from '../../../hooks/useAuth'
 
-// import AuthService from '../../../services/auth.service'
+import AuthService from '../../../services/auth.service'
 
 export const useAuthPage = () => {
 	const [type, setType] = useState('login')

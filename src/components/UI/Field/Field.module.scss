@@ -1,6 +1,7 @@
 @import 'src/assets/styles/variables';
 
 .input {
+	margin-top: 15px;
 	background-color: $accent;
 	border: 1px solid transparent;
 	color: $white;
@@ -18,4 +19,8 @@
 	&::placeholder {
 		color: #946e86;
 	}
+}
+
+.error {
+	color: rgb(183, 71, 71);
 }

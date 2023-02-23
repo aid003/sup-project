@@ -1,14 +1,10 @@
 export const menu = [
   {
     title: "Home",
-    link: "/home",
+    link: "/",
   },
   {
-    title: "Profile",
-    link: "/profile",
-  },
-  {
-    title: "Settings",
-    link: "/settings",
+    title: "Auth",
+    link: "/auth",
   },
 ];
