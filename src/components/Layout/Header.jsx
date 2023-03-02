@@ -6,8 +6,10 @@ import Se from './SE/Se'
 import Searcher from './Searcher/Searcher'
 import Wallet from './Wallet/Wallet'
 import Profile from './Profile/Profile'
+import { useCheckToken } from '../../hooks/useCheckToken'
 
-const Layout = ({ children }) => {
+const Header = ({ children }) => {
+    useCheckToken()
     return (
         <div className={styles.main}>
             <div className={styles.container}>
@@ -24,4 +26,4 @@ const Layout = ({ children }) => {
     )
 }
 
-export default Layout
+export default Header

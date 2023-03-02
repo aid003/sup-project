@@ -1,42 +1,27 @@
-import { useState } from 'react'
+import { useMutation } from '@tanstack/react-query'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../../hooks/useAuth'
+import AuthService from '../../../services/auth.service'
+import Layout from '../../Layout/Layout'
+
+
 import Field from '../../UI/Field/Field'
 import Loader from '../../UI/Loader'
 import styles from './Auth.module.scss'
+import { useAuthPage } from './useAuthPage'
 
-const isLoading = false
-const isLoadingAuth = false
+
+
 
 const Auth = () => {
-	const [type, setType] = useState('auth')
-	
-	/* 
-	TODO:
-
-	[] - Auth context
-	[] - Axios
-	[] - React Query
-
-*/
-
-	const {
-		register,
-		handleSubmit,
-		formState: { errors }
-	} = useForm({
-		mode: 'onChange'
-	})
-	
-	const onSubmit = data => {
-		// type
-		console.log(data)
-	}
-
+	const { setType, register, handleSubmit, errors, isLoading, onSubmit } = useAuthPage()
 	return (
-		<>
+		<Layout>
 			<div className={styles.container}>
 				<h1 className={styles.heading}>Форма регистрации на площадке</h1>
-				{isLoading || isLoadingAuth && <Loader />}
+				{isLoading && <Loader />}
 				<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 					<Field
 						error={errors?.email?.message}
@@ -59,12 +44,12 @@ const Auth = () => {
 						placeholder='Enter Password'>
 					</Field>
 					<div className={styles.wrapperButtons}>
-						<button className={styles.button} onClick={() => setType('auth')}>Sign in</button>
-						<button className={styles.button} onClick={() => setType('reg')}>Sign up</button>
+						<button className={styles.button} onClick={() => setType('login')}>Sign in</button>
+						<button className={styles.button} onClick={() => setType('register')}>Sign up</button>
 					</div>
 				</form>
 			</div>
-		</>
+		</Layout>
 	)
 }
 

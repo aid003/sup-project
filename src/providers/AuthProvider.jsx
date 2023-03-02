@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 import { TOKEN } from '../app.constants'
 
