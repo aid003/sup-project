@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../../hooks/useAuth'
 
 // import { useAuth } from '../../../hooks/useAuth'
 
@@ -7,13 +8,16 @@ import { useNavigate } from 'react-router-dom'
 
 const NotFound = () => {
 
-	const navigate = useNavigate()
+	const { isAuth } = useAuth()
+    const navigate = useNavigate()
 
-	// useEffect(() => {
-	// 	if (!isAuth) {
-	// 		navigate('/auth')
-	// 	}
-	// }, [])
+
+	useEffect(() => {
+		if (!isAuth) {
+			navigate('/auth')
+		}
+	}, [])
+
 
 	return (
 		<>

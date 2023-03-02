@@ -9,7 +9,7 @@ import Profile from './Profile/Profile'
 import { useCheckToken } from '../../hooks/useCheckToken'
 
 const Header = ({ children }) => {
-    useCheckToken()
+    
     return (
         <div className={styles.main}>
             <div className={styles.container}>

@@ -6,17 +6,19 @@ import cn from 'clsx'
 import styles from './Arrow.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../../hooks/useAuth'
+import Cookies from 'js-cookie'
+import { TOKEN } from '../../../../app.constants'
 
 const ArrowMenu = ({ isShow, setIsShow }) => {
-
-    const { isAuth } = useAuth()
+    const { setIsAuth } = useAuth()
 
     const navigate = useNavigate()
 
     const logoutHandler = () => {
+        Cookies.remove(TOKEN)
         setIsShow(false)
+        setIsAuth(false)
         navigate('/auth')
-        // is Auth = false
     }
     return (
         <nav

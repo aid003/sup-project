@@ -11,8 +11,11 @@ import Card from '../../Main/Card/Card'
 import Statistic from '../../Main/Statistic/Statistic'
 import Friends from '../../Main/Friends/Friends'
 import Header from '../../Layout/Header'
+import { useAuth } from '../../../hooks/useAuth'
 
 const Home = () => {
+
+  
 
   return (
     <Layout>
